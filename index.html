@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.mono .arms {
+  width: 20px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border: 3px solid #333;
+  position: absolute;
+  top: 110px;
+}
+
+.mono .arms.left {
+  left: 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+.mono .arms.right {
+  right: 20px;
+  border-radius: 10px 0 0 10px;
+}
+
+.mono .hands {
+  width: 15px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  position: absolute;
+  top: 140px;
+}
+
+.mono .hands.left {
+  left: 25px;
+}
+
+.mono .hands.right {
+  right: 25px;
+}
+
+.mono .legs {
+  width: 30px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 3px solid #333;
+  position: absolute;
+  top: 150px;
+}
+
+.mono .legs.left {
+  left: 35px;
+  border-radius: 0 10px 0 0;
+}
+
+.mono .legs.right {
+  right: 35px;
+  border-radius: 10px 0 0 0;
+}
+
+
+        .statue {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            margin: 50px auto;
+        }
+        .part {
+            position: absolute;
+            background: #f0c3a2; /* Base color */
+            border: 4px solid #3e2a1f; /* Outline color */
+        }
+        .head {
+            top: 0;
+            left: 20%;
+            width: 60%;
+            height: 25%;
+            border-top-left-radius: 20% 30%;
+            border-top-right-radius: 20% 30%;
+        }
+        .eyes, .nose, .mouth {
+            position: absolute;
+            background: #3e2a1f;
+        }
+        .eyes {
+            top: 35%;
+            left: 20%;
+            width: 20%;
+            height: 10%;
+        }
+        .eyes::before {
+            content: '';
+            position: absolute;
+            left: 120%;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+        }
+        .nose {
+            top: 50%;
+            left: 45%;
+            width: 10%;
+            height: 15%;
+        }
+        .mouth {
+            top: 75%;
+            left: 30%;
+            width: 40%;
+            height: 10%;
+        }
+        #TORSO{
+          flex-direction: column;
+          width: 200px;
+          height: 200px;
+
+        }
+        .torso {
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 80%;
+            position: absolute;
+            flex-direction: column;
+        }
+        .torsoD {
+            top: 25%;
+            left: 25%;
+            width: 20%;
+            height: 40%;
+            position: absolute;
+            flex-direction: column;
+        }
+        .torsoI {
+            top: 25%;
+            left: 25%;
+            width: 20%;
+            height: 40%;
+            position: absolute;
+            flex-direction: column;
+        }
+        .arms {
+            top: 30%;
+            left: 10%;
+            width: 80%;
+            height: 40%;
+        }
+        .arms::before, .arms::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+        }
+        .arms::before {
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 100%;
+        }
+        .arms::after {
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+        }
+        .legs {
+            top: 75%;
+            left: 30%;
+            width: 40%;
+            height: 25%;
+        }
+        .legs::before, .legs::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+        }
+        .legs::before {
+            top: 0;
+            left: 0;
+            width: 45%;
+            height: 100%;
+        }
+        .legs::after {
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+        }
+        .feet {
+            top: 95%;
+            left: 20%;
+            width: 60%;
+            height: 10%;
+        }
+
+
+.mono .eyes {
+  width: 20px;
+  height: 15px;
+  background-color: #333;
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+}
+
+.mono.eyes.left {
+  left: 30px;
+}
+
+.mono.eyes.right {
+  right: 30px;
+}
+
+.mono.nose {
+  width: 10px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  top: 35px;
+  left: 45px;
+}
+
+.mono.mouth {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  left: 35px;
+}
+
+.mono.body {
+  width: 100%;
+  height: 120px;
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #333;
+  position: absolute;
+  top: 80px;
+}
+    </style>
+</head>
+<body>
+    <div class="statue"> 
+        <div class="part head">
+            <div class="head"></div>
+            <div class="eyes left"></div>
+            <div class="eyes right"></div>
+            <div class="nose"></div>
+        </div>
+        <div id=" TORSO">
+          <div class="part torso"></div>
+          <div class="part torsoD"></div>
+          <div class="part torsoI"></div>
+
+        </div>
+       
+
+        <div class="part arms">
+          2 
+        </div>
+        <div class="part legs"></div>
+        <div class="part feet"></div>
+    </div>
+</body>
+</html>
